@@ -22,7 +22,7 @@ class RecentFiles extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Recent Files",
+            "Recent Events",
             style: Theme.of(context).textTheme.titleMedium,
           ),
           SizedBox(
@@ -32,13 +32,13 @@ class RecentFiles extends StatelessWidget {
               // minWidth: 600,
               columns: [
                 DataColumn(
-                  label: Text("File Name"),
+                  label: Text("Event"),
                 ),
                 DataColumn(
                   label: Text("Date"),
                 ),
                 DataColumn(
-                  label: Text("Size"),
+                  label: Text("Level"),
                 ),
               ],
               rows: List.generate(
@@ -53,7 +53,7 @@ class RecentFiles extends StatelessWidget {
   }
 }
 
-DataRow recentFileDataRow(RecentFile fileInfo) {
+DataRow recentFileDataRow(RecentFile  fileInfo) {
   return DataRow(
     cells: [
       DataCell(

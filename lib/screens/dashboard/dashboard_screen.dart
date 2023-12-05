@@ -1,8 +1,10 @@
 import 'package:admin/responsive.dart';
+import 'package:admin/screens/dashboard/components/chart.dart';
 import 'package:admin/screens/dashboard/components/my_fields.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
+import 'components/ChartHist.dart';
 import 'components/header.dart';
 
 import 'components/recent_files.dart';
@@ -29,6 +31,7 @@ class DashboardScreen extends StatelessWidget {
                       MyFiles(),
                       SizedBox(height: defaultPadding),
                       RecentFiles(),
+                      ChartHist(),
                       if (Responsive.isMobile(context))
                         SizedBox(height: defaultPadding),
                       if (Responsive.isMobile(context)) StorageDetails(),
