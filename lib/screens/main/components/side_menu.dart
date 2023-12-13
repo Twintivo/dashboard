@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/link.dart';
+import 'package:url_launcher/url_launcher.dart';
 
+final Uri _url = Uri.parse('https://www.twintivo.com');
 class SideMenu extends StatelessWidget {
   const SideMenu({
     Key? key,
@@ -12,7 +15,11 @@ class SideMenu extends StatelessWidget {
       child: ListView(
         children: [
           DrawerHeader(
-            child: Image.asset("assets/images/logo.png"),
+            child: InkWell(
+              onTap: () async {
+                 await launchUrl(_url, mode: LaunchMode.externalApplication);
+                },
+                child: Image.asset("assets/images/logo.png")),
           ),
           DrawerListTile(
             title: "Dashboard",
