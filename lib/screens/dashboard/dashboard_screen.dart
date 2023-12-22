@@ -29,19 +29,11 @@ class DashboardScreen extends StatelessWidget {
                   flex: 5,
                   child: Column(
                     children: [
-                      MyFiles(),
-                      SizedBox(height: defaultPadding),
-                      RecentFiles(),
-                      ChartHist(),
-                      if (Responsive.isMobile(context))
-                        SizedBox(height: defaultPadding),
-                      if (Responsive.isMobile(context)) StorageDetails(),
                       Container(
                         width: MediaQuery.of(context).size.width,
                         height: 400,
                         child: const ModelViewer(
-//                          backgroundColor: Color.fromARGB(0xFF, 0xEE, 0xEE, 0xEE),
-                        backgroundColor: Colors.transparent,
+                          backgroundColor: Colors.transparent,
                           src: 'https://dashboard.twintivo.com/web/assets/assets/images/wh1.glb',
                           alt: 'A Twintivo 3D Viewer',
                           ar: true,
@@ -50,6 +42,13 @@ class DashboardScreen extends StatelessWidget {
                           disableZoom: false,
                         ),
                       ),
+                      MyFiles(),
+                      SizedBox(height: defaultPadding),
+                      RecentFiles(),
+                      ChartHist(),
+                      if (Responsive.isMobile(context))
+                        SizedBox(height: defaultPadding),
+                      if (Responsive.isMobile(context)) StorageDetails(),
                     ],
                   ),
                 ),
