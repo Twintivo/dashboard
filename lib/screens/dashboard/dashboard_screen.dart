@@ -42,7 +42,7 @@ class DashboardScreen extends StatelessWidget {
                         child: const ModelViewer(
 //                          backgroundColor: Color.fromARGB(0xFF, 0xEE, 0xEE, 0xEE),
                         backgroundColor: Colors.transparent,
-                          src: 'https://dashboard.twintivo.com/assets/images/wh1.glb',
+                          src: 'https://dashboard.twintivo.com/web/assets/assets/images/wh1.glb',
                           alt: 'A Twintivo 3D Viewer',
                           ar: true,
                           autoRotate: true,
